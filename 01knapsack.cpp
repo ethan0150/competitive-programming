@@ -7,7 +7,7 @@ using namespace std;
 typedef pair<int,int> pii;
 int main()
 {
-    int maxn,maxw,ans;
+    int maxn,maxw,ans=0;
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cin>>maxn>>maxw;
