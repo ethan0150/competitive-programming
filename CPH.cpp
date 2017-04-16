@@ -8,11 +8,11 @@
 #define RUI(n) scanf("%u",&n)
 #define RS(n) scanf("%s",&n)
 #define RC(n) scanf("%c",&n)
-#define PI(n) prullf("%d",n)
-#define PIln(n) prullf("%d\n",n)
-#define PIb(n) prullf("%d ",n)
-#define PS(n) prullf("%s",n)
-#define PSln(n) prullf("%s\n",n)
+#define PI(n) printf("%d",n)
+#define PIln(n) printf("%d\n",n)
+#define PIb(n) printf("%d ",n)
+#define PS(n) printf("%s",n)
+#define PSln(n) printf("%s\n",n)
 using namespace std;
 typedef unsigned long long ull;
 ull product(ull i,ull j){
