@@ -22,7 +22,7 @@ ull product(ull i,ull j){
 }
 ull C(ull n,ull k){
     if(k>n-k)return product(k+1,n)/product(1,n-k);
-    else return product(n-k+1,n)/product(1,n);
+    else return product(n-k+1,n)/product(1,k);
 }
 ull P(ull n,ull k){return product(n-k+1,n);}
 ull H(ull n,ull k){return C(n+k-1,k);}
