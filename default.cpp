@@ -17,6 +17,7 @@
 #define PSln(n) printf("%s\n",n)
 using namespace std;
 typedef pair<int,int> pii;
+typedef unsigned long long ull;
 int main(){//ioopt
     return 0;
 }
