@@ -15,6 +15,7 @@
 #define PIb(n) printf("%d ",n)
 #define PS(n) printf("%s",n)
 #define PSln(n) printf("%s\n",n)
+#define PC(n) printf("%c",n)
 using namespace std;
 typedef pair<int,int> pii;
 typedef unsigned long long ull;
