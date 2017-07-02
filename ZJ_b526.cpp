@@ -33,16 +33,12 @@ int main(){ioopt
         }
         sort(event,event+2*m);
         FOR(2*m){
-            if(event[i].t==last){
-                if(event[i].a)cnt++;
-                else cnt--;
-            }
-            else{
+            if(event[i].t!=last){
                 if(cnt%2==0)ans+=(event[i].t-last);
-                if(event[i].a)cnt++;
-                else cnt--;
                 last=event[i].t;
             }
+            if(event[i].a)cnt++;
+            else cnt--;
         }
         ans+=n-event[2*m-1].t+1;
         cout<<ans<<'\n';
