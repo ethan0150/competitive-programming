@@ -15,21 +15,21 @@
 #define PIb(n) printf("%d ",n)
 #define PS(n) printf("%s",n)
 #define PSln(n) printf("%s\n",n)
-#define MAXN 100000000
+#define MAXN 10000
 #define MAXC 50000
 using namespace std;
 typedef unsigned short us;
 typedef pair<unsigned short,unsigned short> pss;
-bitset<MAXN> arr;
+bool arr[MAXN][MAXN];
 us a,b,c,ans;
 pss pos[MAXC];
 void flood(us x,us y){
-    arr[b*x+y]=0;
+    arr[x][y]=0;
     for(short i=x-2;i<=x+2;i++){
-        if(i<0)continue;
+        if(i<0||i>9999)continue;
         for(short j=y-2;j<=y+2;j++){
-            if((x==i&&y==j)||j<0)continue;
-            if(arr[b*i+j]){
+            if((x==i&&y==j)||j<0||j>9999)continue;
+            if(arr[i][j]){
                 flood(i,j);
             }
         }
@@ -38,14 +38,14 @@ void flood(us x,us y){
 }
 int main(){ioopt
     while(cin>>a>>b>>c){
-        ans=0;arr.reset();
+        ans=0;memset(arr,0,sizeof(bool)*100000000);
         FOR(c){
             cin>>pos[i].X>>pos[i].Y;
             pos[i].X--;pos[i].Y--;
-            arr[b*pos[i].X+pos[i].Y]=1;
+            arr[pos[i].X][pos[i].Y]=1;
         }
         FOR(c){
-            if(arr[b*pos[i].X+pos[i].Y]){
+            if(arr[pos[i].X][pos[i].Y]){
                 flood(pos[i].X,pos[i].Y);
                 ans++;
             }
